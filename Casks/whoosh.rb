@@ -7,7 +7,7 @@ cask "whoosh" do
   desc "Switch AI coding agents without losing context"
   homepage "https://github.com/srics96/blink"
 
-  depends_on macos: ">= :ventura"
+  depends_on macos: :ventura
 
   app "Whoosh.app"
 
