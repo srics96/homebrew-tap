@@ -1,6 +1,6 @@
 # srics96/homebrew-tap
 
-Homebrew tap for [Whoosh](https://github.com/srics96/blink) — switch AI coding agents without losing context.
+Homebrew tap for [Whoosh](https://github.com/srics96/Whoosh) — switch AI coding agents without losing context.
 
 ```sh
 brew install --cask --no-quarantine srics96/tap/whoosh
