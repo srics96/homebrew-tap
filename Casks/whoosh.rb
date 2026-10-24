@@ -15,11 +15,11 @@ cask "whoosh" do
 
   # Whoosh is ad-hoc signed, not Apple-notarized. Homebrew removed --no-quarantine (5.0) and
   # sandboxes install steps, so the cask cannot clear the flag for you. After install, approve
-  # it once:  xattr -dr com.apple.quarantine "/Applications/Whoosh.app"  (or right-click > Open).
+  # it once with /usr/bin/xattr (full path: a Homebrew `xattr` on PATH lacks -r), or right-click > Open.
   caveats <<~EOS
     Whoosh is ad-hoc signed, not notarized, so macOS quarantines it on first launch.
     Approve it once with:
-      xattr -dr com.apple.quarantine "#{appdir}/Whoosh.app"
+      /usr/bin/xattr -dr com.apple.quarantine "#{appdir}/Whoosh.app"
     or right-click Whoosh in Applications and choose Open.
   EOS
 end
