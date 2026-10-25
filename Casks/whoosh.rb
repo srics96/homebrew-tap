@@ -1,8 +1,8 @@
 cask "whoosh" do
-  version "0.2.2"
-  sha256 "ead9c8ce630c9cbf4e54f9607bce3fa66be2aae6bb109f0dd2ec8c791fa29ad0"
+  version "0.2.2,5"
+  sha256 "76cdd98913ba1a85b0c6b3e103e69b06b1ff8bf4fe07ca38f50191f19d942720"
 
-  url "https://github.com/srics96/Whoosh/releases/download/v#{version}/Whoosh.dmg"
+  url "https://github.com/srics96/Whoosh/releases/download/v#{version.csv.first}/Whoosh.dmg"
   name "Whoosh"
   desc "Switch AI coding agents without losing context"
   homepage "https://github.com/srics96/Whoosh"
