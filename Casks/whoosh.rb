@@ -1,6 +1,6 @@
 cask "whoosh" do
-  version "0.2.0"
-  sha256 "82227b249c3cc201d44dd6bee1e23fae1b518211f4eebefb5b8fab0287190f1c"
+  version "0.2.1"
+  sha256 "0ba859b5dfd223a54b0785cf8af7ef8c7b7e5c34c486085822d5ca8b8a83fcf4"
 
   url "https://github.com/srics96/Whoosh/releases/download/v#{version}/Whoosh.dmg"
   name "Whoosh"
@@ -13,13 +13,13 @@ cask "whoosh" do
 
   zap trash: "~/Library/Application Support/Whoosh"
 
-  # Whoosh is ad-hoc signed, not Apple-notarized. Homebrew removed --no-quarantine (5.0) and
-  # sandboxes install steps, so the cask cannot clear the flag for you. After install, approve
-  # it once with /usr/bin/xattr (full path: a Homebrew `xattr` on PATH lacks -r), or right-click > Open.
   caveats <<~EOS
-    Whoosh is ad-hoc signed, not notarized, so macOS quarantines it on first launch.
-    Approve it once with:
-      /usr/bin/xattr -dr com.apple.quarantine "#{appdir}/Whoosh.app"
-    or right-click Whoosh in Applications and choose Open.
+    Whoosh is ad-hoc signed, not Developer ID signed or Apple-notarized.
+    Expect a first-launch warning. Only if you trust the official download and
+    believe it was not tampered with, try opening Whoosh, then use System Settings
+    > Privacy & Security > Open Anyway for Whoosh (if offered). Review the next
+    prompt before choosing Open. This exception does not verify malware safety.
+    Follow Apple's per-app instructions: https://support.apple.com/en-ie/102445
+    Keep Gatekeeper enabled; do not remove quarantine attributes.
   EOS
 end
