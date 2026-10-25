@@ -1,6 +1,6 @@
 cask "whoosh" do
-  version "0.2.1"
-  sha256 "0ba859b5dfd223a54b0785cf8af7ef8c7b7e5c34c486085822d5ca8b8a83fcf4"
+  version "0.2.2"
+  sha256 "ead9c8ce630c9cbf4e54f9607bce3fa66be2aae6bb109f0dd2ec8c791fa29ad0"
 
   url "https://github.com/srics96/Whoosh/releases/download/v#{version}/Whoosh.dmg"
   name "Whoosh"
